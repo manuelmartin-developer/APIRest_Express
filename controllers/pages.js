@@ -1,4 +1,6 @@
-const films = require('../utils/films')
+
+
+const films = require('../utils/films');
 
 
 const pages = {
@@ -6,8 +8,9 @@ const pages = {
 details: async (req, res) => {
 
     let title = await req.params.title
-    const film = await films.getOneFilm(title); 
-    console.log(film)
+
+    const film = await films.getOneFilm(title);
+
 
 
     res.status(200).send(film);
@@ -16,35 +19,35 @@ details: async (req, res) => {
 
 postFilm: async (req, res) => {
 
+
+    
     const title = await req.body.Title;
-    const film = await films.getOneFilm(title); 
-    res.status(200).send ({message: `Se ha guardado ${title}`})
-
-},
-
-putFilm: async (req, res) => {  //sustituye datos
-
-    const title = await req.body.Title;
-    const id = await req.body.imdbID; 
-
-    const film = await films.getOneFilm(title); 
-    res.status(200).send ({
-        id: `${id}`,
-        message: `Se ha agregado ${title}`})
+    const film = await films.getOneFilm(title);
+    res.status(200).send ({message: `Se ha guardado ${title}`});
     
 },
-
-deleteFilm: async (req, res) => {  
-
+putFilm: async (req, res) => {
+    
     const title = await req.body.Title;
-    const id = await req.body.imdbID; 
+    const id = await req.body.imdbID
 
-    const film = await films.getOneFilm(title); 
-    res.status(200).send ({
+    const film = await films.getOneFilm(title);
+    res.status(201).send ({
         id: `${id}`,
-        message: `Se ha borrado ${title}`})
+        message: `Se ha agregado ${title}`});
+},
+deleteFilm: async (req, res) => {
+    
+    const title = await req.body.Title;
+    const id = await req.body.imdbID
 
-}
+    const film = await films.getOneFilm(title);
+    res.status(201).send ({
+        id: `${id}`,
+        message: `Se ha borrado ${title}`});
 }
 
-module.exports = pages; 
+};
+
+module.exports = pages;
+
