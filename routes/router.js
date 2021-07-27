@@ -1,3 +1,4 @@
+
 const router = require('express').Router();
 
 const pages = require('../controllers/pages')
@@ -9,3 +10,4 @@ router.delete('/film/', pages.deleteFilm);
 
 
 module.exports = router;
+
