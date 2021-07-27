@@ -9,14 +9,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tamaragmartin/APIRest_Express.git"
+
+    "url": "git+https://github.com/manuelmartin-developer/APIRest_Express.git"
+
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tamaragmartin/APIRest_Express/issues"
+
+    "url": "https://github.com/manuelmartin-developer/APIRest_Express/issues"
   },
-  "homepage": "https://github.com/tamaragmartin/APIRest_Express#readme",
+  "homepage": "https://github.com/manuelmartin-developer/APIRest_Express#readme",
+
   "dependencies": {
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
